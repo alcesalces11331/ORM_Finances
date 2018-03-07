@@ -30,6 +30,14 @@ class Receipt
 			SQL
 
 		DB[:conn].execute(sql, self.month, self.day, self.place, self.amount)
+
+		@id = DB[:conn].execute("SELECT last_inert_rowid() FROM Finances")[0][0]
+	end
+
+	def self.create(month:, day:, place:, amount:)
+		receipt = Receipt.new(month, day, place, amount)
+		receipt.save
+		receipt
 	end
 
 end
