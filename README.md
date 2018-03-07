@@ -1,0 +1,1 @@
+An ORM to assist in keeping track of receipts and finances.
