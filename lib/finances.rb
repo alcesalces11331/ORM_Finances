@@ -1,4 +1,4 @@
-class Finance
+class Receipt
 
 	attr_accessor 
 
